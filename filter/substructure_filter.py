@@ -11,8 +11,8 @@ class SubstructureFilter(Filter):
         alert_counter = 0
         for sub in substructure_list:
             sub_mol_smarts = Chem.MolFromSmarts(sub)
-            sub_mo_smiles = Chem.MolFromSmiles(sub)   
-            if ref_mol.GetSubstructMatches(sub_mol_smarts) or ref_mol.HasSubstructMatch(sub_mo_smiles):
+            #sub_mo_smiles = Chem.MolFromSmiles(sub)   
+            if ref_mol.HasSubstructMatch(sub_mol_smarts):
                 alert_counter += 1
         return alert_counter == 0
 
