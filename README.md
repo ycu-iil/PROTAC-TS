@@ -23,7 +23,7 @@ Clone this repository and move into it
 git clone git@github.com:ycu-iil/PROTAC-TS.git
 cd PROTAC-TS
 ```
-Construct a permeability model and design linkers with default settings:
+Construct a prediction model for cell membrane permeability and design linkers with default settings:
 ```bash
 # 1 – feature generation
 python make_feature.py -c config/setting_feature.yaml
@@ -38,8 +38,8 @@ chemtsv2 -c config/setting_protacts.yaml --gpu 0 --use_gpu_only_reward
 ```
 
 ## Detailed workflow
-### 1. Construct a permeability model
-#### 1-1. Generate features
+### 1. Construct a prediction model for cell membrane permeability
+#### 1-1. Feature generation
 `make_feature.py -c config/setting_feature.yaml` calculates descriptors defined in `config/setting_feature.yaml` (e.g., Morgan fingerprint, Mordred descriptor).
 #### 1-2. Model training
 `make_model.py -c config/setting_model.yaml` trains the model using the settings specified in `config/setting_model.yaml`.
@@ -77,13 +77,13 @@ chemtsv2-add_cores_to_linker -c config/setting_protacts.yaml
 ## Filters
 | Module | Target | Description |
 | ------------- | ------------- | ------------- |
-| attachment_points_filter.py | Linker | Exclude linker SMILES in which the number of asterisks, which are used to indicate the points of connection to ligands, is not equal to two | 
-| linker_validation_filter.py | Linker | Exclude linker SMILES that result in invalid molecules when attached to both ligands |
-| radical_filter.py | Linker | Exclude linker SMILES containing radical electrons |
-| ring_size_filter.py | Linker | Exclude linker SMILES containing ring substructures with user‑defined size |
-| branch_filter.py | Linker | Exclude linker SMILES in which two or more atoms branch off from the shortest path between the two attachment points, particularly when this path includes ring structures |
+| attachment_points_filter.py | Linker | Exclude SMILES linkers in which the number of asterisks, which are used to indicate the points of connection to ligands, is not equal to two | 
+| linker_validation_filter.py | Linker | Exclude SMILES linkers that result in invalid molecules when attached to both ligands |
+| radical_filter.py | Linker | Exclude SMILES linkers containing radical electrons |
+| ring_size_filter.py | Linker | Exclude SMILES linkers containing ring substructures with user‑defined size |
+| branch_filter.py | Linker | Exclude SMILES linkers in which two or more atoms branch off from the shortest path between the two attachment points, particularly when this path includes ring structures |
 | linker_length_filter.py | Linker | Enforce a maximum path length between attachment points |
-| linker_similarity_filter.py | Linker | Excludes linker SMILES whose maximum Tanimoto similarity to any of the 2,748 linkers used in RNN-based linker generator training, calculated with Morgan fingerprints, whose radius and dimension were 2 and 2,048, respectively, is below user-defined value|
+| linker_similarity_filter.py | Linker | Excludes SMILES linkers whose maximum Tanimoto similarity to any of the 2,748 linkers used in RNN-based linker generator training, calculated with Morgan fingerprints, whose radius and dimension were 2 and 2,048, respectively, is below user-defined value|
 | structural_alert_filter.py | PROTAC | Exclude linkers that, when attached to both ligands, result in PROTACs containing substructures listed under “Common Alerts” in the medchem package |
 | substructure_filter.py | PROTAC | Exclude linkers that result in PROTACs containing substructures specified in SMILES or SMARTS format, which are considered synthetically challenging or chemically unstable|
 | premodel_ad_filter.py | PROTAC | Exclude linkers that result in PROTACs with a maximum Tanimoto similarity below user-defined value to any of the 43 PROTACs used as training data for the prediction model for cell membrane permeability, based on Morgan fingerprints, whose radius and dimension were 2 and 2,048, respectively |
