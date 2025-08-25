@@ -42,7 +42,7 @@ branch_filter:
   module: filter.branch_filter
   class: BranchFilter
   threshold: 1
-use_structual_alert_filter: True
+use_structural_alert_filter: True
 structural_alert_filter:
   module: filter.structural_alert_filter
   class: StructuralAlertFilterForXMol
