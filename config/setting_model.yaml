@@ -1,0 +1,12 @@
+input_file: 'result/feature/test/fea_morganfp.csv'
+output_path: 'result/test/'
+seed: 42
+
+model:
+    type: "TabPFN" #TabPFN, LightGBM, AutoGluon
+    tabpfn:
+        device: 'cuda' #cuda or cpu
+        ignore_pretraining_limits: False
+    lightgbm:
+        param_tune: True
+        n_jobs: -1

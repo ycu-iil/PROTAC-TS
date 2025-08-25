@@ -1,0 +1,9 @@
+2025-06-18 16:22:30,198 : INFO : Start making model for PROTAC data 
+2025-06-18 16:24:02,844 : INFO : ---------- 
+2025-06-18 16:24:02,844 : INFO : Prediction performance 
+2025-06-18 16:24:02,844 : INFO : R2：0.681 
+2025-06-18 16:24:02,845 : INFO : R：0.831 
+2025-06-18 16:24:02,846 : INFO : RMSE：0.526 
+2025-06-18 16:24:02,874 : INFO : Model type: TabPFN 
+2025-06-18 16:24:02,874 : INFO : Number of features: 500 
+2025-06-18 16:24:02,875 : INFO : Finished! 
