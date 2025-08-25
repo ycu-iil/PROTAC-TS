@@ -1,0 +1,12 @@
+dataset: ../../data/protac_linker_fragments.smi
+output_model_dir: ../../model/rnn_model/
+output_token: ../model/rnn_model/tokens.pkl
+
+dropout_rate: 0.3
+rec_dropout_rate: 0
+learning_rate: 0.001
+epoch: 100
+batch_size: 512
+validation_split: 0.1
+units: 256
+maxlen: 60
