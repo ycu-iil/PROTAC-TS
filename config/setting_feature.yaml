@@ -1,0 +1,19 @@
+input_file: 'data/PROTAC_Caco-2_data.csv'
+target_column: 'Caco-2 A2B Papp (nm/s, Permeability)'
+output_path: 'result/feature/test/'
+
+feature:
+    type: 'morganfp' #morganfp or mordred 
+    morganfp:
+        d_num: 500
+        use_count_base: True
+    mordred:
+        d_type: '2D' #2D or 2D3D
+        sampling_num: 10 # Number of samples for 3D descriptors (ignored if not using 3D)
+
+option:
+    # If True, removes rows where the target value is censored (e.g., contains '<')
+    remove_censored_data: False
+    #A list of SMILES strings to exclude from the dataset.
+    exclude_smiles: #SMILES list or None
+        - "CC1=C(C)C2=C(S1)N1C(C)=NN=C1[C@H](CC(=O)NCC1=CN(CCCCNC(=O)COC3=CC=C(C4CCC(=O)NC4=O)C=C3)N=N1)N=C2C1=CC=C(Cl)C=C1"

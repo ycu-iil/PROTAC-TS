@@ -1,0 +1,638 @@
+2025-06-18 14:04:19.359525: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-06-18 14:04:19.359574: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-06-18 14:04:19.359610: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-06-18 14:04:19.366527: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-06-18 14:04:20.557410: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2025-06-18 14:04:22,407 : INFO : Use GPUs exclusively for reward caluculations 
+2025-06-18 14:04:22.448911: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:894] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2025-06-18 14:04:22.480841: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:894] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2025-06-18 14:04:22.481183: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:894] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2025-06-18 14:04:26,056 : INFO : Loaded model_json from model/rnn_model/model.tf25.json 
+2025-06-18 14:04:26.296491: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:382] MLIR V1 optimization pass is not enabled
+2025-06-18 14:04:26.519282: W tensorflow/c/c_api.cc:305] Operation '{name:'dense/kernel/Assign' id:1477 op device:{requested: '', assigned: ''} def:{{{node dense/kernel/Assign}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=false](dense/kernel, dense/kernel/Initializer/stateless_random_uniform)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+2025-06-18 14:04:26,636 : INFO : Loaded model_weight from model/rnn_model/model.tf25.h5 
+2025-06-18 14:04:26,636 : INFO : ========== Configuration ========== 
+2025-06-18 14:04:26,636 : INFO : c_val: 0.1 
+2025-06-18 14:04:26,636 : INFO : threshold_type: generation_num 
+2025-06-18 14:04:26,636 : INFO : generation_num: 100 
+2025-06-18 14:04:26,636 : INFO : output_dir: result/test 
+2025-06-18 14:04:26,636 : INFO : model_setting: {'model_json': 'model/rnn_model/model.tf25.json', 'model_weight': 'model/rnn_model/model.tf25.h5'} 
+2025-06-18 14:04:26,636 : INFO : token: model/rnn_model/tokens.pkl 
+2025-06-18 14:04:26,636 : INFO : reward_setting: {'reward_module': 'reward.reward_protacts', 'reward_class': 'Linker_permeability_reward'} 
+2025-06-18 14:04:26,636 : INFO : expansion_threshold: 0.995 
+2025-06-18 14:04:26,636 : INFO : simulation_num: 3 
+2025-06-18 14:04:26,636 : INFO : flush_threshold: -1 
+2025-06-18 14:04:26,636 : INFO : policy_setting: {'policy_module': 'policy.ucb1', 'policy_class': 'Ucb1'} 
+2025-06-18 14:04:26,636 : INFO : save_checkpoint: False 
+2025-06-18 14:04:26,636 : INFO : restart: False 
+2025-06-18 14:04:26,636 : INFO : checkpoint_file: chemtsv2.ckpt.pkl 
+2025-06-18 14:04:26,636 : INFO : use_radical_filter: True 
+2025-06-18 14:04:26,636 : INFO : radical_filter: {'module': 'filter.radical_filter', 'class': 'RadicalFilter'} 
+2025-06-18 14:04:26,636 : INFO : use_ring_size_filter: True 
+2025-06-18 14:04:26,636 : INFO : ring_size_filter: {'module': 'filter.ring_size_filter', 'class': 'RingSizeFilter', 'max_threshold': 6, 'min_threshold': 5} 
+2025-06-18 14:04:26,636 : INFO : use_branch_filter: True 
+2025-06-18 14:04:26,636 : INFO : branch_filter: {'module': 'filter.branch_filter', 'class': 'BranchFilter', 'threshold': 1} 
+2025-06-18 14:04:26,636 : INFO : use_structual_alert_filter: True 
+2025-06-18 14:04:26,636 : INFO : structual_alert_filter: {'module': 'filter.structual_alert_filter', 'class': 'StructualAlertFilterForXMol'} 
+2025-06-18 14:04:26,636 : INFO : use_linker_length_filter: True 
+2025-06-18 14:04:26,636 : INFO : linker_length_filter: {'module': 'filter.linker_length_filter', 'class': 'LinkerLengthFilter', 'lower_threshold': False, 'upper_threshold': 15} 
+2025-06-18 14:04:26,636 : INFO : use_premodel_ad_filter: True 
+2025-06-18 14:04:26,636 : INFO : premodel_ad_filter: {'module': 'filter.premodel_ad_filter', 'class': 'PremodelADFilterForXMol', 'threshold': 0.1} 
+2025-06-18 14:04:26,637 : INFO : use_linker_similarity_filter: True 
+2025-06-18 14:04:26,637 : INFO : linker_similarity_filter: {'module': 'filter.linker_similarity_filter', 'class': 'LinkerSimilarityFilter', 'threshold': 0.3} 
+2025-06-18 14:04:26,637 : INFO : use_linker_validation_filter: True 
+2025-06-18 14:04:26,637 : INFO : linker_validation_filter: {'module': 'filter.linker_validation_filter', 'class': 'LinkerValidationFilter'} 
+2025-06-18 14:04:26,637 : INFO : use_attachment_points_filter: True 
+2025-06-18 14:04:26,637 : INFO : attachment_points_filter: {'module': 'filter.attachment_points_filter', 'class': 'AttachmentPointsFilter', 'threshold': 2} 
+2025-06-18 14:04:26,637 : INFO : use_substructure_filter: True 
+2025-06-18 14:04:26,637 : INFO : substructure_filter: {'module': 'filter.substructure_filter', 'class': 'SubstructureFilterForXMol', 'substructure': ['C#CN', 'C#CO', 'C#CS', 'N[CH2]N', 'N[CH2]O', 'N[CH2]S', 'O[CH2]O', 'O[CH2]S', 'S[CH2]SSN', '[N][N][N]', '[N][N][O]', '[N][N][S]', '[N][O][O]', '[N][O][S]', '[N][S][S]', '[O][O][O]', '[O][O][S]', '[O][S][S]', '[S][S][S]', '[N]=[C]=[C]', '[N]=[C]=[O]', '[N]=[CH]', 'C(=S)']} 
+2025-06-18 14:04:26,637 : INFO : include_filter_result_in_reward: False 
+2025-06-18 14:04:26,637 : INFO : leaf_parallel: False 
+2025-06-18 14:04:26,637 : INFO : leaf_parallel_num: 18 
+2025-06-18 14:04:26,637 : INFO : cores: ['ClC(C=C1)=CC=C1C(C2=C(N3C4=NN=C3C)SC(C)=C2C)=N[C@H]4CC([*:1])=O', 'O[C@@H]1C[C@H](N(C1)C([C@H](C(C)(C)C)[*:2])=O)C(NCC2=CC=C(C=C2)C3=C(N=CS3)C)=O'] 
+2025-06-18 14:04:26,637 : INFO : infinite_loop_threshold_for_selection: 1000 
+2025-06-18 14:04:26,637 : INFO : infinite_loop_threshold_for_expansion: 20 
+2025-06-18 14:04:26,637 : INFO : fix_random_seed: False 
+2025-06-18 14:04:26,637 : INFO : random_seed: -1 
+2025-06-18 14:04:26,637 : INFO : use_lipinski_filter: False 
+2025-06-18 14:04:26,637 : INFO : lipinski_filter: {'module': 'filter.lipinski_filter', 'class': 'LipinskiFilter', 'type': 'rule_of_5'} 
+2025-06-18 14:04:26,637 : INFO : use_pubchem_filter: False 
+2025-06-18 14:04:26,637 : INFO : pubchem_filter: {'module': 'filter.pubchem_filter', 'class': 'PubchemFilter'} 
+2025-06-18 14:04:26,637 : INFO : use_sascore_filter: False 
+2025-06-18 14:04:26,637 : INFO : sascore_filter: {'module': 'filter.sascore_filter', 'class': 'SascoreFilter', 'threshold': 3.5} 
+2025-06-18 14:04:26,637 : INFO : use_pains_filter: False 
+2025-06-18 14:04:26,637 : INFO : pains_filter: {'module': 'filter.pains_filter', 'class': 'PainsFilter', 'type': ['pains_a']} 
+2025-06-18 14:04:26,637 : INFO : batch_reward_calculation: False 
+2025-06-18 14:04:26,637 : INFO : qsub_parallel: False 
+2025-06-18 14:04:26,637 : INFO : neutralization: False 
+2025-06-18 14:04:26,637 : INFO : use_selfies: False 
+2025-06-18 14:04:26,637 : INFO : debug: False 
+2025-06-18 14:04:26,637 : INFO : max_len: 60 
+2025-06-18 14:04:26,637 : INFO : rnn_vocab_size: 26 
+2025-06-18 14:04:26,637 : INFO : rnn_output_size: 26 
+2025-06-18 14:04:26,637 : INFO : num_gru_units: 128 
+2025-06-18 14:04:26,637 : INFO : GPU devices: 0 
+2025-06-18 14:04:26,637 : INFO : =================================== 
+2025-06-18 14:04:27,128 : INFO : state position: ['&'] 
+/home/murakami/.pyenv/versions/mambaforge-22.9.0-3/envs/test/lib/python3.11/site-packages/keras/src/engine/training_v1.py:2359: UserWarning: `Model.state_updates` will be removed in a future version. This property should not be used in TensorFlow 2.0, as `updates` are applied automatically.
+  updates=self.state_updates,
+2025-06-18 14:04:27.266330: W tensorflow/c/c_api.cc:305] Operation '{name:'gru_1_1/AssignVariableOp' id:1463 op device:{requested: '', assigned: ''} def:{{{node gru_1_1/AssignVariableOp}} = AssignVariableOp[_has_manual_control_dependencies=true, dtype=DT_FLOAT, validate_shape=true](gru_1_1/Variable, gru_1_1/while/Identity_4)}}' was changed by setting attribute after it was run by a session. This mutation will have no effect, and will trigger an error in the future. Either don't modify nodes after running them or create a new session.
+2025-06-18 14:04:27,591 : INFO : new compound ['C(COCCOCCOCCO*)OCC*', '*C(=O)C1CCN(*)CC1', 'O=C(CN*)NCCCCCCCCCC*', 'c1cc(NCCCCCO*)ccc1OCC*', 'N(*)C(=O)CCCCC(=O)Nc1ccc(/*)cc1', 'C(CN*)OCCOCCOCC*', '*C(=O)CCOCCOCCOCCOCCOC*', 'O=C(CC1CCN(*)CC1)CCCCCCCC(*)=O', 'c1(*)ccc(OCCCCC*)cc1', 'N(CCCCCCNC(=O)C*)C*', 'C(=O)(*)CCCC#C*', '*CCCCCCCC(=O)N1CCN(CC2)CC(=O)NCCOCCNC(=O)CC*', 'O=C(*)NCCCCCNC(CO*)=O', 'c1n(CCCC(=O)*)nnc1NC(=O)CO*', 'N1(C(=O)CCC(*)=O)CCN(CCCCCCCCCO*)CC1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.46it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 76.69it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.04it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.82it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.81it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.11it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.99it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.63it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.64it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.78it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.16it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 76.13it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.43it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.32it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 62.19it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.01it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.07it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.29it/s]
+2025-06-18 14:04:31,740 : INFO : Valid SMILES ratio: 0.26666666666666666 
+2025-06-18 14:04:31,741 : INFO : Number of valid SMILES: 4 
+2025-06-18 14:04:31,741 : INFO : state position: ['&', 'N'] 
+2025-06-18 14:04:31,828 : INFO : new compound ['N(CC(N*)=O)COC*', 'N1(C(CCC*)=O)CCN(CCCC(*)=O)CC1', 'N(CCn1cc(CC*)nn1)*', 'N1(C(=O)CCC(OC*)CCN1*', 'N(C(=O)CCCC(=O)*)CCCCC*', 'N1(*)CCC(CCCSC(CCCCCCCCCCCCC*)=O)CC1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.71it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.18it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.72it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.41it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.83it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.72it/s]
+2025-06-18 14:04:32,586 : INFO : Valid SMILES ratio: 0.16666666666666666 
+2025-06-18 14:04:32,586 : INFO : Number of valid SMILES: 5 
+2025-06-18 14:04:32,586 : INFO : state position: ['&', 'c'] 
+2025-06-18 14:04:32,650 : INFO : new compound ['c1(*)nnn(CC(=O)N2CCN(CCCN2CCC(*)CC2)CC2)nc1', 'c1cc(OCCCCCCNC(C*)=O)ccc1*', 'c1n(OCCCCCC(NCC*)=O)cc(C(NCCC*)=O)c1nn1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.96it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 64.93it/s]
+2025-06-18 14:04:33,269 : INFO : Valid SMILES ratio: 0.3333333333333333 
+2025-06-18 14:04:33,269 : INFO : Number of valid SMILES: 6 
+2025-06-18 14:04:33,270 : INFO : state position: ['&', 'C'] 
+2025-06-18 14:04:33,354 : INFO : new compound ['C(COCCO*)NC(=O)C*', 'C1N(C(COCC*)=O)NC(=O)CCCC*', 'C(COCCOCCO*)NC(=O)CCC*', 'C1(CN22CC(OC2CCN(*)CC3)C3)CCN(*)C1', 'C(Nc1ccc(/N=N/*)cc1)C(=O)NC*', 'C1(*)CCC22C2CC[C@H](C*)CC1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.98it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.17it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.65it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.51it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.28it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.44it/s]
+2025-06-18 14:04:35,405 : INFO : Valid SMILES ratio: 0.5 
+2025-06-18 14:04:35,406 : INFO : Number of valid SMILES: 9 
+2025-06-18 14:04:35,406 : INFO : state position: ['&', 'N', '('] 
+2025-06-18 14:04:35,764 : INFO : new compound ['N(C1Cc2(CCOCCOCCN2CCN(*)CCN)*)CC1', 'N(*)C(CCCCc1nnn1CCC(=O)N*', 'N(c1ccc(NC(=O)CO*)cc1)C(*)=O', 'N(\\NC(=O)/OCCCSC(=O)Cn1cc(*)ccn1)OSC*', 'N(OCCOCCOCCOCCOCCOCCNCC(*)=O)*', 'N(=C/1C=#CCCOCCOCCN*', 'N(N1CCN(CCN*)CC1)N1*', 'N(/C=Cc1ccc(OCCOCC(N*)=O)cc1)*', 'N(CC*)CCCNn1cc(*)nn1', 'N(*)C(NC1CCC(C*)CC1)=O)=O', 'N(c1cccc(C(*)=O)c2', 'N(\\C(=O)N*)CCOC*', 'N(OCCC(NCCCO*)=O)N*', 'N(=O)(C)C(CCN(C)CC(=O)NCC*)CC1)*', 'N(N(CCOCCOCCNC(C*)=O)CCN(CC(*)C', 'N(/N=C/c1ccc(*)cc1)*', 'N(C(=O)CCCCNC(=O)C*)C(N*)=O', 'N(*)c1ccc(C(*)=O)cc1', 'N(c1ccc(NC(=O)CO*)cc1)N1CCC(c2cc(*)onn2)CC2', 'N(\\C=C/C(=O)*)CNC(=O)CCC*', 'N(O*)CCN(CCCCCCNC(C*)=O)=O', 'N(=C/C(=O)*)CCCCCCCNC(c1cnc(N*)cc1)=O', 'N(N(C(COCC*)=O)=O)CCOCCOCC*', 'N(/c1ccc(N2CCN(CCC*)CO)nc1)CCC*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.78it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.28it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.25it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.84it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.74it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.39it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.28it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.36it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.15it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.26it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.53it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.29it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.08it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.23it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.68it/s]
+2025-06-18 14:04:37,919 : INFO : Valid SMILES ratio: 0.125 
+2025-06-18 14:04:37,919 : INFO : Number of valid SMILES: 12 
+2025-06-18 14:04:37,919 : INFO : state position: ['&', 'c', '1'] 
+2025-06-18 14:04:38,011 : INFO : new compound ['c1cc(/N=N/NC(=O)C*)ccc1*', 'c1(/C=N/N(C2CCO*)nnc(C#CCOCCNC(=O)CO*)cn1', 'c1c(N2CCN(CCC*)CC2)nnc(C*)c1', 'c1(CC*)ccc(N2CCN(*)CC2)nc1', 'c1c(OC*)ccc(/C=N/N*)c1', 'c1(C*)ccc(NCc2ccc(CN*)cc2)cc5'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.73it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.62it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.87it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.37it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.49it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.20it/s]
+2025-06-18 14:04:39,302 : INFO : Valid SMILES ratio: 0.3333333333333333 
+2025-06-18 14:04:39,302 : INFO : Number of valid SMILES: 14 
+2025-06-18 14:04:39,302 : INFO : state position: ['&', 'c', '1', '('] 
+2025-06-18 14:04:39,673 : INFO : new compound ['c1(CC*)cc(CCOC*)nn1', 'c1(OC)CC(NCCCCC*)=O)ccc(CC*)cc1', 'c1(*)ccc(CN(C)CC*)cc1', 'c1(N2CCN(c2noc(N2CCN(*)CC2)=O)cc2)*', 'c1(/C=N\\NC(=O)C*)ccc(N=C/c2ccc(OCCC4CCC(*)CC3)cc1)=O', 'c1(c2ccc(OCCOC*)cc(N2)c2)(*)=O', 'c1(-(*)=O)nnc(C(=O)*)n1', 'c1(n)ccc(OCCCCCCCC*)cc2)(=O)CCCCC(=O)NCCOCC*', 'c1(C(=O)N)CCNC(=O)CCCN*)ccc(/C=N/NC(C*)=O)cc1', 'c1(OCCCCCC*)ccc(CCN*)cc1', 'c1(*)ccc(N(CCCCO*)cc1', 'c1(NCCCCC*)cc(CCCCC*)nn1', 'c1(/C=N/N(C3CCN(CCC*)CC2)=O)ccc(C*)c1', 'c1(c2nnn(C*)c2)CCCCCCC*', 'c1(-*)nnn(CCOCCOCC*)c1', 'c1(n2nn(C*)cc1CCCCC(N*)=O', 'c1(C*)nnn(CCCCO*)c1', 'c1(OCCOCCOC*)ccc(N*)nc1', 'c1(*)ccc(C(*)=O)cc1', 'c1(N*)nnn(CCOCCOCCOCCC(=O)N(C*)C2)c1', 'c1(/N=N/c2ccc(*)cc2)OCCOC*', 'c1(c2cc(C(NCCCCCOc2ccc(/N=N/*)cc2)=O)CCC(*)C1', 'c1(-2OC*)ccc(*)cc1', 'c1(n)cc(*)ccc2)CCNC(C*)=O'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.15it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.35it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.10it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.66it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.80it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.12it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.93it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.01it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.63it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.83it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.69it/s]
+2025-06-18 14:04:42,744 : INFO : Valid SMILES ratio: 0.20833333333333334 
+2025-06-18 14:04:42,744 : INFO : Number of valid SMILES: 19 
+2025-06-18 14:04:42,744 : INFO : state position: ['&', 'N', '(', '/'] 
+2025-06-18 14:04:43,238 : INFO : new compound ['N(/C=C/C(=O)*)CCCC*', 'N(/N=C\\c1ccc(*)cc1)C(=O)CCCCCCCCCCCC(N*)=O', 'N(/c1ccc(OCC)CCCCCC*)cc1)C(=O)*', 'N(/OCC*)COCCn1cc(*)nn1', 'N(/1c1ccc(NC(C*)=O)cc1', 'N(/(=O)COCCOc1ccc(/C=N/NC(=O)C*)cc1)CCOCCOCCO*', 'N(/n1cc(C*)cn2)C(=O)NCC*', 'N(/*)C*', 'N(/#CC(N*)=O)CCC*', 'N(/S=CCC(=O)CCCC*)CCCCCC(*)=O', 'N(/C=C(CCCCCCNCC(=O)*)CN*', 'N(/N(C)(CN1CCN(*)CC1)=O)CCNC(=O)C*', 'N(/c1ccc(N2)c3c(C(=O)*)cc2)C(=O)N1CCCC(*)C1)C1', 'N(/OCCC*)CNC(C*)=O', 'N(/1ccc(/N=N/*)ccc1)C(=O)*', 'N(/(NCCC*)=O)C*', 'N(/n1cc(CCCC*)nn1)CNC(=O)N2CCC(*)CC1', 'N(/*)CCCNC(CCCCCCOC*)C1', 'N(/#CCn1cn(CCCCCCCC*)nn1)O*', 'N(/S=CCC(*)=O)CCOCCN*', 'N(/C=C/c1ccc(OCCCC(NCC#C*)=O)cc1)=N/c1ccc(OCCOCC*)cc1', 'N(/N(CC1(CC(NCCCCC*)CC1)=O)=O)CCOCCNC(=O)CCC*', 'N(/c1ccc(OCCOCCOCC*)cc1)/N=C/c1ccn(CCCCCO*)cn1', 'N(/Oc1ccc(CCNC(=O)COCCOCC)C*)cc(/O=NC*)c1', 'N(/1cnc(*)cc1)CCCCC*', 'N(/(C)COc1ccc(*)cc1)=O)C(CCCC(NCCN*)=O)=O', 'N(/n(C1)CN(*)CC2)=O)CCOCC*', 'N(/*)CCCNC(CCC(=O)*)=O', 'N(/#c1cc(CCC(=O)N*)cc1)C*', 'N(/S=C\\c1ccc(C[C@H]*)cc2)N(C)C(*)=O'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.48it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.24it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.93it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.91it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.40it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.61it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.23it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 77.05it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.73it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.05it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.81it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.55it/s]
+2025-06-18 14:04:44,744 : INFO : Valid SMILES ratio: 0.06666666666666667 
+2025-06-18 14:04:44,744 : INFO : Number of valid SMILES: 21 
+2025-06-18 14:04:44,744 : INFO : state position: ['&', 'C', '('] 
+2025-06-18 14:04:45,057 : INFO : new compound ['C(CO*)OCCOCCOCCn1cc(*)nn1', 'C(OCC*)COCCn1cc(C*)nn1', 'C(*)#CCC(NCC(=O)*)=O', 'C(NCCOCC*)COC*', 'C(=O)(c1ccc(C*)cc1)NC(*)=O', 'C(c1nnn(CCC(*)=O)c1)C*', 'C(#Cc1nnn(C*)c1)CCCCCCCC*', 'C(n1cc(C*)nn1)OCC*', 'C(C*)CNC(CCCN1CC(N3CCN(*)CC2)C)C1)=O', 'C(OCCOCC(NCCN*)=O)(*)=O', 'C(*)CCCCCc1nnn(CCOCCOCCC(*)=O)c1', 'C(N2CCC(CCS)CCN(*)CC2)CC1)C*', 'C(=O)(NCCNC(C*)=O)CCOCCOCCOCC*', 'C(c1ncc(OCC(=O)NCCCN*)c(OC)c1', 'C(#CCN1CCN(*)CC1)(=O)CO*', 'C(n1cc(C*)nn1)COCCOCC#C*', 'C(CNC(=O)CO*)*', 'C(OCCNC(CCC(*)=O)*', 'C(*)CNC(CCC(*)=O)=O', 'C(N11CC(C*)CCN*', 'C(=O)(NCCOCCOCCn1cc(CCCC*)nn1)*', 'C(c1cn(CNCCOCCOCC*)nn1)(=O)CCCC(NCC*)=O', 'C(#C*)COC*', 'C(n1cc(*)nn1)CCC*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.91it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.80it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.17it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.72it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.87it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.75it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.99it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.99it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.35it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.35it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.64it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 76.92it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.59it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.31it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.36it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.29it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.25it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.74it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.50it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 64.84it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.16it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.36it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.18it/s]
+2025-06-18 14:04:48,737 : INFO : Valid SMILES ratio: 0.20833333333333334 
+2025-06-18 14:04:48,737 : INFO : Number of valid SMILES: 26 
+2025-06-18 14:04:48,738 : INFO : state position: ['&', 'c', '1', 'c'] 
+2025-06-18 14:04:48,816 : INFO : new compound ['c1c(OCCCCCC*)cc(*)n1', 'c1cc(OCCCCCCC*)ccc1CO*', 'c1c(CCOCCOCCOCC*)nnn1CCC*', 'c1cc(C(*)=O)nn1', 'c1c(*)cn(CCOCCOCCOCCOCCOCCOCCOCCOCC*)n1', 'c1ccc(CCC*)cc1CCOCCOCC*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.35it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.11it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.86it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.22it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.09it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.62it/s]
+2025-06-18 14:04:50,115 : INFO : Valid SMILES ratio: 0.3333333333333333 
+2025-06-18 14:04:50,115 : INFO : Number of valid SMILES: 28 
+2025-06-18 14:04:50,116 : INFO : state position: ['&', 'N', '(', 'C'] 
+2025-06-18 14:04:50,480 : INFO : new compound ['N(C(=O)CN1CCN(*)CC1)*', 'N(CC(*)=O)CC(=O)N1CCC(O*)CC1', 'N(C*)C(=O)C1CCC(C)CCN2CCC(CCOCC2CN(*)C2)CC2)CC1', 'N(C1CC2(CCN(*)CC1)CC1)CCc1nnn(C*)c1', 'N(Cc1cc(OCCOCC(=O)NCCCCCCCC(=O)*)nc1', 'N(CN2CCC(*)CC1)N1CC(CC(N3CCC(*)CC3)CC1', 'N(C)CC(NCCCCCCCCCC(N1CCN(*)CC1)=O)(CCS2C*', 'N(C2CC(C(=O)C*)CCN1*', 'N(C(C*)=O)CCOCCOCCNC(=O)C*', 'N(CC(CN2CCN(C2CN(*)C3)C1)=O)CCCCCCC*', 'N(C*)c1ccc(CC*)cc1', 'N(C1CCN(*)CC1)C*', 'N(Cc1ccc(N*)cc1)OCC(*)=O', 'N(CNC(=O)CCC(=O)N*)*', 'N(C)(CO(C)CC(*)C1)(*)=O', 'N(C2CN(*)C1)#CCNCCC*', 'N(C(COCC*)=O)CCOCC(=O)N1CCN(*)CC1', 'N(CC(=O)NCCCCNC(C*)=O)*', 'N(C*)CCCCC*', 'N(C1CCN(CC#C*)CC1)CC(NCC#C*)=O', 'N(Cc1ccc(NC(C*)=O)nn1)COCCOCCOC*', 'N(CN(CO*)C(*)=O', 'N(C)CCCO*)(*)=O', 'N(C2CCN(CC#C*)CC1)N1c1ccc(C(=O)N/*)cc1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.73it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.67it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 76.15it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.36it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.45it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.63it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.26it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.45it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.83it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.30it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.83it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.14it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.34it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.20it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.31it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.94it/s]
+2025-06-18 14:04:53,205 : INFO : Valid SMILES ratio: 0.16666666666666666 
+2025-06-18 14:04:53,205 : INFO : Number of valid SMILES: 32 
+2025-06-18 14:04:53,205 : INFO : state position: ['&', 'c', '1', 'c', 'c'] 
+2025-06-18 14:04:53,254 : INFO : new compound ['c1cc(OCCC*)ccc1CCCOc1ccc(/C=N/NC(=O)C*)cc1', 'c1cc(N2CC2(C*)CC2)nnc1C(*)=O', 'c1cc(C(=O)*)nn1CCCC*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.17it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.83it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.98it/s]
+2025-06-18 14:04:53,901 : INFO : Valid SMILES ratio: 0.3333333333333333 
+2025-06-18 14:04:53,901 : INFO : Number of valid SMILES: 33 
+2025-06-18 14:04:53,901 : INFO : state position: ['&', 'c', '1', '(', 'C'] 
+2025-06-18 14:04:54,299 : INFO : new compound ['c1(CCC*)nnn(CCCCC*)c1', 'c1(C(=O)*)ccc(*)cc1', 'c1(C*)ccc(OCCOCCOc2ccc(*)cc1)C1', 'c1(COc2ccc(/C=N/NC(=O)CCCCC*)cc2)C(*)=O', 'c1(CNC(CCC*)=O)cc(CO*)nn1', 'c1(C#C*)nnn(CCC*)c1', 'c1(C2CN(*)CCN(*)CC2)ncc1', 'c1(Cccnncc1)*)c1*', 'c1(C)COc2ccc(C(*)=O)nn1)nccc1*', 'c1(CCC*)nnn(CCOCC*)n1', 'c1(C(=O)NCCC#C*)ccc(/N=N/*)cc1', 'c1(C*)nnn(CCCCCCCCO*)c1', 'c1(COc2cc(CC*)cc2)(=O)NCCCCCOC*', 'c1(CN2CCC(CN3CCN(CC3CCC(C*)CC3)CC2)=O)c(*)ccc1', 'c1(C#C*)nnn(CCC*)c1', 'c1(C2CCN2*)ccc(CC*)cc1', 'c1(Cc2ccc(N*)ccc3OC(=O)COCCOCC*', 'c1(C)C*)cn(CCOCCOCCOCCOCC(*)=O)nn1', 'c1(CCCC(N1CCN(CCOCCOCC*)CC2)=O)ccc(C*)cc1', 'c1(C(*)=O)CCc2cc(N2CCN(CCCCCCC*)CC2)nc1', 'c1(C*)cc(C(NCCCOC*)=O)ccc1C=O', 'c1(CO*)nnn(CCOCCOCCOCCOCC(=O)*)n1', 'c1(CN*)ccc(CNC(=O)C*)cc1', 'c1(C#CCN2CCN(CCC*)CC2)nccc(*)c1', 'c1(C2CCN(CC*)CC2)ccc(*)cc1', 'c1(Cc2nnn(CC(NCCOCCOCC*)=O)nc1', 'c1(C)*)nnn(CCCCO*)c1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.85it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.91it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.42it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.20it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.65it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.01it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.65it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.22it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 76.32it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.09it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.53it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.42it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.92it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.58it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.71it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.99it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.83it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.13it/s]
+2025-06-18 14:04:57,101 : INFO : Valid SMILES ratio: 0.14814814814814814 
+2025-06-18 14:04:57,101 : INFO : Number of valid SMILES: 37 
+2025-06-18 14:04:57,101 : INFO : state position: ['&', 'N', '(', '*'] 
+2025-06-18 14:04:57,144 : INFO : new compound ['N(*)CC(NCC(=O)NCCOCCOCCO(*)(F)=O)C', 'N(*)CCCC(NCCCCCCC(*)=O)=O', 'N(*)CCCCCNC(CCCCN*)=O'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.32it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.10it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.40it/s]
+2025-06-18 14:04:57,787 : INFO : Valid SMILES ratio: 0.3333333333333333 
+2025-06-18 14:04:57,787 : INFO : Number of valid SMILES: 38 
+2025-06-18 14:04:57,788 : INFO : state position: ['&', 'N', '(', '*', ')'] 
+2025-06-18 14:04:57,907 : INFO : new compound ['N(*)CCNC(CN*)=O', 'N(*)c1ccc(N2CCN(CCCCN*)CC2)nc1', 'N(*)(CC(C)CC#C*)N1', 'N(*)C(=O)CCCn1nnc(CCCCCCO*)c1', 'N(*)c1cccc1c1ccc(OCCOCC(=O)NCCCCCN*)cc1', 'N(*)(CCCC(=O)NCCC*)=O', 'N(*)C1CN(*)C1', 'N(*)c1ccc(N(C)CCCCC(NCCCC*)=O)cc1', 'N(*)(CCOCCOc1c(CCC*)ccc1/\\N=N/*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.66it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.92it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.22it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.39it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.18it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.85it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 64.28it/s]
+2025-06-18 14:04:59,248 : INFO : Valid SMILES ratio: 0.2222222222222222 
+2025-06-18 14:04:59,248 : INFO : Number of valid SMILES: 40 
+2025-06-18 14:04:59,249 : INFO : state position: ['&', 'C', '(', 'n'] 
+2025-06-18 14:04:59,397 : INFO : new compound ['C(n1nnc(*)c1)CCOCCCOC*', 'C(n2nnc(CCOC*)c1)CCC*', 'C(n)c(C(=O)*)nnn1CCOCCOCCOCCOCCOCCO*', 'C(n1cc(CCCO*)nn1)OCCOCCOCCOCCOCCOCCOCC*', 'C(n2nnc(CO*)c1)CCCCCCCC*', 'C(n)nnc(C(=O)NCCOCCOCCOCCOCCOCCOCCOCCOCC*)c1)C*', 'C(n1nnc(CCNC(C*)=O)c1)COCCNC(CC*)=O', 'C(n2cc(C(NCCCCC*)=O)nn1)CC*', 'C(n)cc(CC*)nn1)CCCCCC*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.30it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.64it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.91it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 64.70it/s]
+2025-06-18 14:05:00,251 : INFO : Valid SMILES ratio: 0.1111111111111111 
+2025-06-18 14:05:00,251 : INFO : Number of valid SMILES: 41 
+2025-06-18 14:05:00,251 : INFO : state position: ['&', 'C', '(', 'c'] 
+2025-06-18 14:05:00,289 : INFO : new compound ['C(c1nnn(CCCC(=O)*)c1', 'C(c1cn(CCCCCCCC(*)=O)nn1)CCCO*', 'C(c1cc(C*)nn1)*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.82it/s]
+2025-06-18 14:05:00,327 : INFO : state position: ['&', 'c', '1', 'c', 'c', '('] 
+2025-06-18 14:05:00,611 : INFO : new compound ['c1cc(CC*)ccc1OCC#C*', 'c1cc(N*)cc1CCN1CCC(C*)CC1', 'c1cc(OC*)ccc1NC(=O)CCOCCn1cc(CCCCCCCCCCC*)nn1', 'c1cc(*)cc(OCCOCC(*)=O)c1', 'c1cc(/N=N/c2c(C(=O)NCCCN*)cc2)/N=N/*)c1', 'c1cc(-(=O)*)ccc1CNC(=O)CCCCCCCCC*', 'c1cc(CC*)ccc1*', 'c1cc(N2CCC(C*)CC2)ccc1C(=O)NCC(=O)*', 'c1cc(OCCCC(NCCCCC*)=O)ccc1C*', 'c1cc(*)ccc1CC(=O)NCC*', 'c1cc(/N=N/c2cnc(C*)cc2)ccc1', 'c1cc(-N=N/c2ccc(OCC(=O)NCCOCCOCC3CCN(*)CC2)ncc1)*', 'c1cc(CNC(=O)NCCCC*)ccc1)*', 'c1cc(NC(CO*)=O)ccc1C(*)=O', 'c1cc(OCCc2ncc(n2nnc(*)c2)CC1)(=O)CCC*', 'c1cc(*)cc(C(=O)NCCC*)c1', 'c1cc(/N=N/c2cccc(OC2CCN(*)CC3)cc2)C2=CN=CCC*', 'c1cc(-(NCCCCC(=O)N(C*)CC2)ccc1O*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.86it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.56it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.42it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.63it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.32it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.50it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.15it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.66it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.94it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.61it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.32it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.10it/s]
+2025-06-18 14:05:02,673 : INFO : Valid SMILES ratio: 0.16666666666666666 
+2025-06-18 14:05:02,673 : INFO : Number of valid SMILES: 44 
+2025-06-18 14:05:02,673 : INFO : state position: ['&', 'N', '(', '/', 'C'] 
+2025-06-18 14:05:03,257 : INFO : new compound ['N(/C=C/C(N1CCN(c2ncc(N3CCN(*)CC3)cc2)CC1)CC*', 'N(/CCC(=O)NCCCCCCCN*)*', 'N(/C(CCC(*)=O)CCN(C)#Cc1ccc(/C=N/NC(=O)*)cc1', 'N(/Cc1ccc(O*)CC(=O)c1ccc(NC(*)=O)cc1', 'N(/COCCOCCOCCOCCOCCOCCC2CCN(CC(NC*)=O)=O)CC*', 'N(/C/c1c(OC)cc(/C=N/N*)cc1)*', 'N(/C1CC(*)CC1)Cn1nnc(CCCCC(=O)*)c1', 'N(/CN(CC*)=O)CCOCCCNC(=O)CC*', 'N(/Cn1nnc(*)n1)C(COCCOCCOCCOCC*)=O', 'N(/C*)(c1ccc(C(=O)*)cc1)=O', 'N(/C\\*)C(=O)NCCOCCOCCOCCOCCOCCOCCOCC*', 'N(/C)n1c(CCOCCOCCOCC*)nn1)CCCC(=O)*', 'N(/C=C/C(N*)=O)CCCOCCCCC*', 'N(/CCCCOCCOCCOCCOCCOCCOCCC(=O)*)C*', 'N(/C(N*)=O)COC*', 'N(/Cc1cnc(CC*)cc1CN*', 'N(/COCCn1cc(C(=O)N2CCN(CC*)CC2)nn1)C*', 'N(/C/c1ccc(OCC#CC*)cc1)COCCOCCOCCOCC(*)=O', 'N(/C1c1ccc(OCC*)cc1)C(=O)*', 'N(/CNC(CCC*)=O)CCCCC(*)=O', 'N(/Cnnnn1cc(*)c1)COCCOCC*', 'N(/C*)OCCOCCN1CCN(C(=O)C#*)CC1', 'N(/C\\CN2CCN(C(=O)C*)CC2)CC*', 'N(/C)c1ccc(/N=N/*)cc1OC(OCCN*)=O', 'N(/C=C/C(=O)NCCCN1CCC(C(*)=O)CC1)CC*', 'N(/CCCCCCCCCCN1CCC(N2CCN(*)CC2)CC1)C*', 'N(/C(N*)C)C1', 'N(/Cc1nnn(CCOCCOCCOCC*)c1)CC*', 'N(/COc1ccc(/N=N/c2ccc(*)cc2)=O)CCC*', 'N(/C/c1ccc(NC(=O)C*)cc1)(=O)C*', 'N(/C1(C*)C1)C(CCCCCCCCCCCCCC(*)=O)=O)*', 'N(/CN(C)C*)C(=O)C*', 'N(/Cn1cc(CCCCC(=O)N*)nn1)CCCCCC(*)=O)', 'N(/C*)CCCN*', 'N(/C\\CCC(=O)*)OCCOCC#C*', 'N(/C)Oc1ccc(/C=N/NC(CC*)=O)cc1)COCCOCCOCCOCCOCCOCCO*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.28it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.62it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.73it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.87it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.51it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.71it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.54it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.01it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.38it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.04it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.85it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.51it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.15it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.29it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.36it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.14it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.45it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.46it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.61it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.30it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.71it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.37it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.24it/s]
+2025-06-18 14:05:06,254 : INFO : Valid SMILES ratio: 0.1111111111111111 
+2025-06-18 14:05:06,254 : INFO : Number of valid SMILES: 48 
+2025-06-18 14:05:06,254 : INFO : state position: ['&', 'c', '1', '(', '*'] 
+2025-06-18 14:05:06,285 : INFO : new compound ['c1(*)ccc(*)cc1', 'c1(*)ccc(*)cc1', 'c1(*)ccc(N2CCC(C(=O)N3CCN(*)CC2)CC2'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.89it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.95it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.96it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.54it/s]
+2025-06-18 14:05:07,504 : INFO : Valid SMILES ratio: 0.6666666666666666 
+2025-06-18 14:05:07,504 : INFO : Number of valid SMILES: 50 
+2025-06-18 14:05:07,504 : INFO : state position: ['&', 'N', '(', 'C', '1'] 
+2025-06-18 14:05:07,753 : INFO : new compound ['N(C1CC(CN1C(=O)CC*)CC1)N1*', 'N(C1(C*)C1)CCCO*', 'N(C1c1cc(CCCCCCCC(=O)NCCCC(*)=O)cc1)O*', 'N(C1*', 'N(C1)CN(CC(N3CCC(*)CC3)=O)CC1)*', 'N(C1n1cc(CCC*)cc1)CC(=O)*', 'N(C1OCCOCCOCCOCCOCC(*)=O', 'N(C1CC(C*)C1)C*', 'N(C1(C*)C1)CNC(=O)*', 'N(C1cc(COc2c(OC)cc(SC(=O)*)cc2)C#C*', 'N(C1*c1ccc(C(=O)NCCCCCC*)cc1', 'N(C1)CC2(CCN(*)CC1)CCOCCN*', 'N(C1ncc(*)cc1)CCCCCCC*', 'N(C1OCC(*)=O)CCCCC*', 'N(C1CC(C*)C1)(=O)*', 'N(C1(CN(C(C)C(*)=O)C)C1)C)*', 'N(C1c1ccc(*)cc1)CCC*', 'N(C1*c1ccc(CCC*)cc1', 'N(C1)C(c1cccc(*)c1)CCC1CCN(CC#C*)CC1', 'N(C1n1cc(C*)c(N2Cc(*)c1', 'N(C1OCC(=O)NCCC*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.39it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.89it/s]
+2025-06-18 14:05:07,830 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C'] 
+2025-06-18 14:05:08,091 : INFO : new compound ['c1cc(C(=O)N*)ccc1CCCCCCC#C*', 'c1cc(CC*)ccc1N*', 'c1cc(CN2C*)CCN(CCCCCC*)CC2)nc1', 'c1cc(C*)ccc1COCCOCCOCCNC(=O)C*', 'c1cc(C#Cc2ccc(*)cc2)c(N(\\N=C/C*)c1', 'c1cc(COc2ccc(CN*)cc2)ccc(N2CCC(CCN*)CC2)c1', 'c1cc(C2*)ccc1N1CCN(CC2C*)CC1', 'c1cc(C(NCCCC*)=O)ccc(N*)c1', 'c1cc(CCCCCC*)cc(OC)c1/*)c1', 'c1cc(CN*)nc1CCCCCC*', 'c1cc(C*)ccc1OCCOCCOCCOCCOCCOCCOCC*', 'c1cc(C#C*)cc1c1ccc1*', 'c1cc(CO*)ccc1C2N(C*)C1', 'c1cc(C2=N/N(C)CC(*)=O)ncc1)CCN1CCN*', 'c1cc(C(=O)*)nnc1CCCCC*', 'c1cc(CCCCCC*)cn1', 'c1cc(CNC(=O)*)ccc(CC*)c1', 'c1cc(C*)ccc1O[C@H]1CC2(OC)CCN(*)CC2', 'c1cc(C#C*)ccc1O*', 'c1cc(CO*)ccc(C(=O)*)c1', 'c1cc(C2CN(CCCN*)CC2)(=O)c(=O)cc1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.52it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.88it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.21it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.87it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.09it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.61it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.87it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.14it/s]
+2025-06-18 14:05:08,917 : INFO : Valid SMILES ratio: 0.047619047619047616 
+2025-06-18 14:05:08,917 : INFO : Number of valid SMILES: 51 
+2025-06-18 14:05:08,918 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C'] 
+2025-06-18 14:05:09,257 : INFO : new compound ['c1cc(CC*)ccc1OC*', 'c1cc(CCNC(C*)=O)ccc1C*', 'c1cc(CCCCCC*)nn1CNCCCC(=O)NOCCOCCOCCN*', 'c1cc(CCOCCOC*)ccc1C*', 'c1cc(CC(*)=O)nn1)CCCC*', 'c1cc(CC=N/NC(=O)CCCC*)ccc1CCCCCCC*', 'c1cc(CC#C*)ccc1*', 'c1cc(CC2N(CCCCCN3CCN(C3CCN(*)CC3)CO)cc2)CCN1*', 'c1cc(CC*)ccc1OCCCCCCCCCCCC*', 'c1cc(CCN2CCN(C(=O)*)cc2)CCN(C(C*)=O)C1', 'c1cc(CCCC*)cc(*)c1', 'c1cc(CCOCCOCC*)ccc1N1CCN(*)CC1', 'c1cc(CC(=O)*)ccc1OC*', 'c1cc(CC=N/NC(=O)CCCCCCCCS*)ccc1OCCCCC*', 'c1cc(CC#c2cc(OCC(=O)*)c(=O)cc(*)cc1', 'c1cc(CC2CN(C(C4CC(*)=O)CC2)cc1)=N/NC(=O)CO*', 'c1cc(CC*)ccc1CNC(=O)CC*', 'c1cc(CCNC(=O)C*)ccc1C*', 'c1cc(CCC(=O)NCCC*)ccc1', 'c1cc(CCOC*)ccc1CN/N=C\\c1ccc(OCCNC(CCCCCCC*)=O)cc1', 'c1cc(CC(=O)NCCCCCCCCCC*)ccc1*', 'c1cc(CC=N/NC(c3ccc(*)cc2)=O)CCN1CC*', 'c1cc(CC#CCCCN*)ccc1OCC(=O)NCCOCCOCC*', 'c1cc(CC2CCN(C2CCN(*)CC3)CC2)ccc1*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.77it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.24it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.02it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.03it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.69it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.00it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.83it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.97it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.95it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.74it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.49it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.94it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.00it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.39it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.99it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.64it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.61it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.79it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.64it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.03it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.81it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 63.94it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.02it/s]
+2025-06-18 14:05:14,030 : INFO : Valid SMILES ratio: 0.2916666666666667 
+2025-06-18 14:05:14,030 : INFO : Number of valid SMILES: 58 
+2025-06-18 14:05:14,031 : INFO : state position: ['&', 'c', '1', '(', '-'] 
+2025-06-18 14:05:14,665 : INFO : new compound ['c1(-2=N\\c2ccc(C(=O)*)ccc1OCcc(OCC(NCCN*)=O', 'c1(-(=O)NCCC*)ccc(*)c1', 'c1(-C=C/NC(=O)*)ccc(NC(=O)CCOCC*)c1', 'c1(-*)c(/C=N\\NC(=O)CCCCCCCCC*)cc1', 'c1(-N=N/c2ccc(N*)cc2OC[C@H](*)C1', 'c1(-c2cc(*)onnn2)CCC*', 'c1(-#C*)ccc(*)cc1', 'c1(-OC*)cc(CN*)nn1', 'c1(-n(F)c(C#CCCCC(=O)NNC*)ccc(C(=O)*)CC1', 'c1(-3C*)ccc(N=N/(*)=O)cc1', 'c1(-[C@H]=N)N(*)CCN(*)CC2)ncc1', 'c1(-1cc(C(=O)*)cnc1OCC(=O)NCCCN*', 'c1(-/NCCCCCCC*)nnn(CC(*)=O)o1', 'c1(-2=CN(CCNC(CO*)=O)CCC2)ncc(C(=O)*)c1', 'c1(-(NCNC(CCCCCCCCCCC*)=O)c(cccco1)NC(=O)C*', 'c1(-CCCCC(=O)*)nnn(CCOCCOCCOCCNC(=O)CCC*)c1', 'c1(-*)cn(CC2CCN(CCCC(N3CC*)CC2)=O)ccc1', 'c1(-N*)cc(CCCC#C*)=O)nn1', 'c1(-c2ccc(*)cc2)ccc(N2CC*)cc1', 'c1(-#CCCNC(=O)cccc(CC=N/NC(OCCOCCOCC*)=O)cc(*)cn1', 'c1(-OCCOCCNC(C*)=O)ccc(/N=N/*)cc1', 'c1(-n2cc(CNCC*)nn2)ccc(O*)c1', 'c1(-3cn(C*)nnn1)CCCN*', 'c1(-[C@H]2CCN(CCCCCC*)CC2)nccc1C*', 'c1(-1=CC(O*)CC3)cc(*)cc1', 'c1(-/N=N/c2ccc(*)cc2)(=O)NCCN1CCN(*)CC1', 'c1(-2CCC((F)N(C*)CC3)=O)ccc1C(C*)=O', 'c1(-(NCC*)=O)ccc(NC(C*)=O)cc1', 'c1(-C*)ccc(N(*)CC2)cc1', 'c1(-*)nnn(CCOCC*)c2', 'c1(-N=N/c2cnc(OCCOCCOCCOCCOCCOC*)ccc2=O)CCC*', 'c1(-c2nccc(*)c2)=O)CCN(C(=O)C3CCN(CC#C*)CC2)CC1', 'c1(-#C*)nnn(CCCO*)c1', 'c1(-Oc2cn(CCCCCO*)C2)ncc(*)c1', 'c1(-ncc(CN(C)C(*)=O)cc1)CCCC(NCCC*)=O', 'c1(-3OCCN(*)CC2)nnc(COCCOCC*)c1', 'c1(-[C@H]2C2C[C@H](*)C2)ncc(*)nn1', 'c1(-1=CCCC(=O)[C@@H]2(C*)C2)nnc1CC*', 'c1(-/NC(COCC*)=O)CCN1*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.49it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.79it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.60it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.02it/s]
+2025-06-18 14:05:14,818 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', '*'] 
+2025-06-18 14:05:14,855 : INFO : new compound ['c1cc(*)ccc1COCCOCCOCCOCCO*', 'c1cc(*)ccc1CN1CCC(CC(=O)*)CC1', 'c1cc(*)ccc1OCCCCCCCC*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.15it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.98it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.74it/s]
+2025-06-18 14:05:14,965 : INFO : state position: ['&', 'N', '(', '*', ')', 'c'] 
+2025-06-18 14:05:15,040 : INFO : new compound ['N(*)c1ccc(N=C/CCCN*)cc1', 'N(*)cccc(OCCCC*)c1', 'N(*)c1ccc(/C=N/NC(CCC(=O)*)=O)cc1', 'N(*)ccccc1/CC(=O)*)C', 'N(*)c1ccc(OC3CCN(CCCCCCCCCC*)CC2)cc1', 'N(*)cccc/N1C(=O)*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.07it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.72it/s]
+2025-06-18 14:05:15,113 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', '('] 
+2025-06-18 14:05:15,227 : INFO : new compound ['c1cc(CC(=O)*)ccc1COCC*', 'c1cc(CC(N2CCN(c3ccc(*)cc2)C)2)=O)C1', 'c1cc(CC(*)=O)cnc1OCCOCCOCC*', 'c1cc(CC(=O)N*)ccc1/O=N/C(=O)NCCOCCOCCOCCOCCC*', 'c1cc(CC(N*)=O)ccc1OC*', 'c1cc(CC(*)=O)nnc1*', 'c1cc(CC(=O)N*)cc(C(NCC*)=O)c1', 'c1cc(CC(N2Cc3)OCCOCCOCCO*)=O)ccc1CN1CCN(*)CC1', 'c1cc(CC(*)=O)nnc1CCCC*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.06it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.87it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.65it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.94it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.21it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.38it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.87it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.90it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.68it/s]
+2025-06-18 14:05:17,188 : INFO : Valid SMILES ratio: 0.3333333333333333 
+2025-06-18 14:05:17,188 : INFO : Number of valid SMILES: 61 
+2025-06-18 14:05:17,189 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', 'O'] 
+2025-06-18 14:05:17,250 : INFO : new compound ['c1cc(CCOCCOCC*)cc1CCCCC*', 'c1cc(CCO*)ccc1OCCCCC*', 'c1cc(CCOCCOCC*)ccc1*', 'c1cc(CCO*)ccc1CCNC(=O)C*', 'c1cc(CCOCCOCCOCC*)nn1CCC*', 'c1cc(CCO*)ccc1)(NCC*)=O'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.19it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.46it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.89it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.26it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.41it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.10it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.91it/s]
+2025-06-18 14:05:19,121 : INFO : Valid SMILES ratio: 0.5 
+2025-06-18 14:05:19,122 : INFO : Number of valid SMILES: 64 
+2025-06-18 14:05:19,122 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', 'C'] 
+2025-06-18 14:05:19,372 : INFO : new compound ['c1cc(CCCCC*)ccc1C(N1CCN(*)CC1)=O', 'c1cc(CCC*)cc(OCC(NCCOCCOCCOCCOCC(=O)*)=O', 'c1cc(CCCN*)ccc1OCCOCCOC(=O)C*', 'c1cc(CCC(*)=O)nnc1C(=O)NCCCCCCCCC*', 'c1cc(CCCOCCO*)cnc1C*', 'c1cc(CCC#C*)ccn1CCOCCOCCO*', 'c1cc(CCCc2ccc(*)cc2)ccc1*', 'c1cc(CCCCCN*)cc1', 'c1cc(CCC*)cc1C*', 'c1cc(CCCN*)cc(OC)c1ccn(C*)c1)', 'c1cc(CCC(*)=O)nnn1CCC*', 'c1cc(CCCOC*)ccc1OCCCCCCCC*', 'c1cc(CCC#C*)ccc1CC*', 'c1cc(CCCccc(N2CCC(C*)CC3)nc1)=O', 'c1cc(CCCCCC*)cc1CNCCCCCC*', 'c1cc(CCC*)ccc(N2CCN(CCCCC*)CC2)c1', 'c1cc(CCCN*)ccc1OCCCCNC(=O)C#C*', 'c1cc(CCC(=O)*)ccc1CC*', 'c1cc(CCCOCCOCC*)=O)ccc(N*)c1', 'c1cc(CCC#C*)cn1CCCCS*', 'c1cc(CCCc2cc(*)cnnn2)CN(C(CCCC*)=O)C2'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.78it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.14it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.82it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.80it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.55it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.39it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.27it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.30it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.17it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.18it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.32it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.87it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.61it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.91it/s]
+2025-06-18 14:05:22,024 : INFO : Valid SMILES ratio: 0.19047619047619047 
+2025-06-18 14:05:22,024 : INFO : Number of valid SMILES: 68 
+2025-06-18 14:05:22,025 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', '*'] 
+2025-06-18 14:05:22,044 : INFO : new compound ['c1cc(CC*)ccc1OCC(=O)NCCCN*', 'c1cc(CC*)nn1)*', 'c1cc(CC*)ccc1*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.41it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.94it/s]
+2025-06-18 14:05:22,654 : INFO : Valid SMILES ratio: 0.6666666666666666 
+2025-06-18 14:05:22,654 : INFO : Number of valid SMILES: 70 
+2025-06-18 14:05:22,654 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', 'N'] 
+2025-06-18 14:05:22,891 : INFO : new compound ['c1cc(CCNC(CC*)=O)ncc1CCC*', 'c1cc(CCN*)ccc(OCC(=O)NCCCCC(*)=O)c1', 'c1cc(CCN2CCN(CCOc2ccc(CC*)cc2)OC2CCC1', 'c1cc(CCN(C)CN2CCN(c3ncccc3*)*', 'c1cc(CCNc2cc([C@H](C)*)=O)ccc2)/N=*)F', 'c1cc(CCNCCCC=N\\NC(CC*)=O)ccc1*', 'c1cc(CCN*)ccc1/C=N/NC(*)=O', 'c1cc(CCN2CCN(CCCCCCC*)CC2)ccc(/#=N/N*)c1', 'c1cc(CCN(CCCN(CCOCCOCCOCC*)CC2)ncc1N/N=C/c1=OCCCN*', 'c1cc(CCNc(CN*)ccc2)ccc2CCCCNC(CO*)=O', 'c1cc(CCNC(*)=O)ccc1NC(=O)CC*', 'c1cc(CCN*)ccc1CCCNC(=O)CO*', 'c1cc(CCN2CCN(*)CC2)ccc(C(=O)*)c1', 'c1cc(CCN(CCN(CCOCCN*)CC2)=O)ccc1*', 'c1cc(CCNc2ccc(/C=N/NC(*)=O)cn2)CCN1*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.65it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.61it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.80it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.31it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.20it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.91it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.56it/s]
+2025-06-18 14:05:24,227 : INFO : Valid SMILES ratio: 0.13333333333333333 
+2025-06-18 14:05:24,227 : INFO : Number of valid SMILES: 72 
+2025-06-18 14:05:24,228 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', '*', ')'] 
+2025-06-18 14:05:24,253 : INFO : new compound ['c1cc(CC*)ccc1N1CCN(CC2CN(*)C2)CC1', 'c1cc(CC*)cc(CN*)c1', 'c1cc(CC*)ccc1*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.66it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.00it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.14it/s]
+2025-06-18 14:05:24,905 : INFO : Valid SMILES ratio: 0.6666666666666666 
+2025-06-18 14:05:24,905 : INFO : Number of valid SMILES: 74 
+2025-06-18 14:05:24,906 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', 'N', '*'] 
+2025-06-18 14:05:24,931 : INFO : new compound ['c1cc(CCN*)ccc1*', 'c1cc(CCN*)ccc1OCCCCCC*', 'c1cc(CCN*)ccc1C(NCCCC(*)=O)=O'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.89it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.53it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.07it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.65it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.22it/s]
+2025-06-18 14:05:26,189 : INFO : Valid SMILES ratio: 0.6666666666666666 
+2025-06-18 14:05:26,189 : INFO : Number of valid SMILES: 76 
+2025-06-18 14:05:26,190 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', 'O', 'C'] 
+2025-06-18 14:05:26,362 : INFO : new compound ['c1cc(CCOCCOCCOCC*)ccc1CN(C)CC1(C*)CC2', 'c1cc(CCOC*)ccc1CCCCCC*', 'c1cc(CCOC2)CC(*)CC2)ccc1/N=N/c1ccc(OCCCCCC*)cc1', 'c1cc(CCOCNN(CO*)=O)ccc1*', 'c1cc(CCOCC#C*)ccc1', 'c1cc(CCOC*)ccc1CC*', 'c1cc(CCOC2CCC(N*)CC3)ncc1*', 'c1cc(CCOCNC(CCC(=O)NC*)ccc2[C@H]cccc(N*)cc1', 'c1cc(CCOCCOCCCCCCC(N*)=O)ccc1)*', 'c1cc(CCOC*)ccc1CCCOCc1nnn(CCOCCOCCOCC*)c1', 'c1cc(CCOC2CCN(CCOCCOCCN*)CC2)=COcccc(*)c1', 'c1cc(CCOCN(C)C(C*)OC)=O)ccc1*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.97it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.60it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.35it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.22it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.07it/s]
+2025-06-18 14:05:27,801 : INFO : Valid SMILES ratio: 0.16666666666666666 
+2025-06-18 14:05:27,801 : INFO : Number of valid SMILES: 78 
+2025-06-18 14:05:27,802 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', '(', 'N'] 
+2025-06-18 14:05:28,221 : INFO : new compound ['c1cc(CC(N2CCC(O*)CC2)=O)ccc1C*', 'c1cc(CC(NCCC*)=O)ccc1CC*', 'c1cc(CC(N*)=O)ncc1OCCCC(N1CCN(CCCNC(=O)C*)CC1)=O', 'c1cc(CC(N)CCN*)=O)ccc1C*', 'c1cc(CC(N3CCN(CCC*)COCcc2)C(NCCCNC(CC#C*)=O)C1', 'c1cc(CC(N(C)CCN(C(CC3CC4(CC3)C3)CN(*)CC3)=O)cc1)CCN*', 'c1cc(CC(N=N/*)c4nnc(CCCCCC(=O)N*)cc2)CC1', 'c1cc(CC(Nc2ccc(CC*)cc2)=O)CCC(*)C1', 'c1cc(CC(N1CCN(CN3CCN3CCN(CCN3C3CC3(C33CC(NCCCCCCCC*)CC2)=O)', 'c1cc(CC(N2CCC(*)CC2)cc2)CCOCCN*', 'c1cc(CC(NCCCCC*)=O)ccc1CC*', 'c1cc(CC(N*)=O)cnc1CN*', 'c1cc(CC(N)CCCCCCC*)=O)ccc1*', 'c1cc(CC(N3CCN(C3CCN(*)CC3)cc2)CCOCC(=O)*', 'c1cc(CC(N(CCCCCCCCCC*)=O)ccc1C*', 'c1cc(CC(N=N/NC(=O)CN*)=O)ccc1C*', 'c1cc(CC(Nc2c(OC)c2ncc(*)cc2)=O)CN1C1', 'c1cc(CC(N1CCC(C*)=O)cc1)=O', 'c1cc(CC(N2CCC(C*)CC2)=O)ccc1N*', 'c1cc(CC(NCCCC*)=O)ccc1C(=O)*', 'c1cc(CC(N*)=O)cc1C*', 'c1cc(CC(N)CCC*)=O)ccc1C*', 'c1cc(CC(N3CCN(CCC(=O)*)cc2)CC2)CCN(*)CC1', 'c1cc(CC(N(C)C(C*)=O)ccc1)OCC*', 'c1cc(CC(N=N/*)=O)ccc1C*', 'c1cc(CC(Nc2ccc(CCOC3C*)ccc3)=O)CCCC(=O)*', 'c1cc(CC(N1CCN(*)CC4)=O)ccc1C(=O)*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.71it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.27it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.29it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.74it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.75it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.46it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.15it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.66it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.09it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.74it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.11it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.05it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.05it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.21it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.55it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.84it/s]
+2025-06-18 14:05:32,066 : INFO : Valid SMILES ratio: 0.2222222222222222 
+2025-06-18 14:05:32,066 : INFO : Number of valid SMILES: 84 
+2025-06-18 14:05:32,066 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', '*', ')', 'c'] 
+2025-06-18 14:05:32,123 : INFO : new compound ['c1cc(CC*)ccc1OCCCCCC(=O)NCCCCCC*', 'c1cc(CC*)cn(CC#C*)c1', 'c1cc(CC*)ccc1NC(CCCCC*', 'c1cc(CC*)cnc1CCCCCCCCC(*)=O', 'c1cc(CC*)ccc(C(=O)*)c1', 'c1cc(CC*)cn(CCOCCOCC*)n1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.17it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.50it/s]
+2025-06-18 14:05:32,199 : INFO : state position: ['&', 'c', '1', '(', 'O'] 
+2025-06-18 14:05:32,353 : INFO : new compound ['c1(OCC(NCCCCCCC*)=O)ccc(*)cc1', 'c1(O[C@H]2Cc(C*)ccc(OCCCCCC*)cc1', 'c1(O*)CCN(CCCC*)CC2)cccc1=O\\N(N1)C1(CCOCCOCCOCCOCCN2CCN(C3C', 'c1(OCCc2cc(*)ccn2)C(C*)=O', 'c1(O[C@H]2C[C@H](c2ccc(*)cc2))CC(F)(C*)CC1', 'c1(O*)ccc(CCCCC*)c2', 'c1(OCCCCCCCCCNC(C*)=O)ncc(N*)c1', 'c1(O[C@H]2C[C@H](CN3CC*)CC2(CCN(*)C2)CC3', 'c1(O*)cc(COCC*)nn1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.37it/s]
+2025-06-18 14:05:32,391 : INFO : state position: ['&', 'C', '(', 'C'] 
+2025-06-18 14:05:32,720 : INFO : new compound ['C(CCCCC(=O)N1CCN(*)CC1)CCNCCC*', 'C(COCCC(=O)NCCO*)CO*', 'C(CNC(CC*)=O)OCC*', 'C(C*)NC(CCCCCCCCC(*)=O)=O', 'C(C(=O)*)NCCCCC*', 'C(Cn1nnc(CCCO*)c1)CCCCCC*', 'C(C#C*)OCCOCCOCCOCCO*', 'C(C1CCN(CC*)CC1)(*)=O', 'C(CC(N*)NC(=O)CO*)=O', 'C(COCc1nnn(CCC*)c1)*', 'C(CN1CCC(*)CC1)/N=C/c1ccc(*)cc1)C1', 'C(C*)OCCOCCOCCn1cc(CCCOCCOCCOCCOCCOCCN3CCN(CC*)CC2)nc1', 'C(C(NCCC(*)=O)=O)CN*', 'C(Cn1cc(OCCNC(=O)CO*)cn1)COCCO*', 'C(C#CCn1cc(CC(*)=O)nn1)CN1CCN(*)CC1', 'C(C1CCC(NCCC*)CC1)NCCC*', 'C(CC#C*)CC(N1CCN(c2ccc(*)cc2)C1)CC1', 'C(COCCNC(CCC*)=O)C(N*)=O', 'C(CN*)CNC(CCCC(=O)*)=O', 'C(C*)CCNC(C*)=O', 'C(C(N*)=O)(=O)CCC*', 'C(Cn1c(C*)nn1)CC*', 'C(C#C*)OCC*', 'C(C1CCN(CC(=O)NCCCCCCCCCCCCCCCC*)CC1)*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.85it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.09it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.53it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.45it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.87it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.50it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.20it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.66it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.07it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.90it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.62it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.83it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.48it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.47it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.61it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.92it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.37it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.42it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.78it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.98it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.60it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.91it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.38it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.24it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.93it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.72it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.53it/s]
+2025-06-18 14:05:37,516 : INFO : Valid SMILES ratio: 0.2916666666666667 
+2025-06-18 14:05:37,516 : INFO : Number of valid SMILES: 91 
+2025-06-18 14:05:37,516 : INFO : state position: ['&', 'C', '(', 'O'] 
+2025-06-18 14:05:37,669 : INFO : new compound ['C(OCCOCCC(N*)=O)COCCOCC*', 'C(O*)CCCCCCn1nnc(CO*)c1', 'C(Oc1ccc(CCNC(=O)CCC*)cc1)*', 'C(OC#CCNC(C(=O)C(C)C2CN(*)CC))C)))CN2CCN(*)CC1)=O', 'C(O*)COC*', 'C(Oc1ccc(/C=N/NC(C*)=O)cc1)CCCCO*', 'C(OCCOCC*)COCCNCC(=O)N1CCN(*)CC1', 'C(O*)C(N1CC(C2CN(*)C2)CC1)=O', 'C(Oc1ccc(/C=N/NC(=O)CO*)cc1)(=O)N1CCN(*)CC1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.06it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.15it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.81it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.56it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.98it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.89it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.34it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.43it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.77it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.04it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.97it/s]
+2025-06-18 14:05:39,864 : INFO : Valid SMILES ratio: 0.3333333333333333 
+2025-06-18 14:05:39,864 : INFO : Number of valid SMILES: 94 
+2025-06-18 14:05:39,864 : INFO : state position: ['&', 'C', '(', 'N'] 
+2025-06-18 14:05:40,163 : INFO : new compound ['C(NC(c1ccn(*)nc1)=O)CCOCCCC*', 'C(N1CCN(CC*)CC1)CCC(=O)N1CCN(C*)CC1', 'C(N*)(*)=O', 'C(N(C)CCCN2CCN(CCOC*)CC1)CC*', 'C(Nc1ccc(/N=C/c2ccc(CCCCO*)cc2)*', 'C(N2CCN(CC#C*)CC1)*', 'C(NC1CCN(CC(=O)N2CCN(*)CC1)CC1)=O', 'C(N1CCC2(CC(*)C1)=O)CCOCCOC*', 'C(N*)(CCC(*)=O)=O', 'C(N(CCS(C)CCOC*)CCOc1ccc(*)cc1', 'C(Nc1ccc(C*)cc1)OCCOCCOCCC(N1CCN(*)CC1)=O', 'C(N2CCN(CC#C*)CC1)CC*', 'C(NC(COc1ccc(/N=N/c2ccc(*)cc2)cn1)=O)CCC(N*)=O', 'C(N1CCN(C2CC[C@H](CC2CCN(*)CCC2)C2)CC1)c1cccc(*)cc1', 'C(N*)COCCOCCOCCNCCCCCCCCO*', 'C(N(CCS(C*)C1)C)C*', 'C(Nc1ccc(/C=N\\NC(=O)NCCCCC*)cc1)=O)*', 'C(N2CCN(*)CC1)COCc1nnn(*)c1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.48it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.19it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.25it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.33it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.68it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.13it/s]
+2025-06-18 14:05:40,386 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', 'N', 'C'] 
+2025-06-18 14:05:40,549 : INFO : new compound ['c1cc(CCNC(=O)CCCC*)ccc1C(NCCOCCNC(CO*)=O', 'c1cc(CCNCCCCC*)ccc1OCCCO*', 'c1cc(CCNC*)ccc1NC1=CC=C(C=C1)NC(*)=O)C1', 'c1cc(CCNCc2ccc(N*)cc2)cnc1*', 'c1cc(CCNC(=O)CCC(=O)N*)nnc1*', 'c1cc(CCNCCC*)ccc1OCCCCCCC*', 'c1cc(CCNC*)ccc1CO*', 'c1cc(CCNCc2nnn(CC*)c2)nn1CC*', 'c1cc(CCNC(=O)c2ccc(*)cc2)CCC1(C)CC(*)C2', 'c1cc(CCNCC*)ccc1C1CCC(*)C1)C(=O)CO', 'c1cc(CCNC*)ccc1OCCC*', 'c1cc(CCNCc2cnc(CC*)cc2)cc1CCCc1nnn(*)n1'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.89it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 76.51it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.58it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.04it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.93it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.81it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.56it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.32it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.48it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.76it/s]
+2025-06-18 14:05:42,536 : INFO : Valid SMILES ratio: 0.25 
+2025-06-18 14:05:42,536 : INFO : Number of valid SMILES: 97 
+2025-06-18 14:05:42,536 : INFO : state position: ['&', 'c', '1', 'c', 'c', '(', 'C', 'C', 'O', '*'] 
+2025-06-18 14:05:42,572 : INFO : new compound ['c1cc(CCO*)ccn1OCC(=O)*', 'c1cc(CCO*)cnn1CCOCCOCCOCCOC*', 'c1cc(CCO*)ccc1OCCC(=O)N/N=N/*)OC1'] 
+2025-06-18 14:05:42,572 : INFO : state position: ['&', 'C', '(', 'n', '1'] 
+2025-06-18 14:05:42,623 : INFO : new compound ['C(n1nnc(CCC*)c1)CCc1nnn(CCC*)c1', 'C(n1ncc(*)c1)OCCOCCOCCOCCNC(C*)=O', 'C(n1nnc(CCCCCN*)c1)NC(CO*)=O'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.33it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.12it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 76.46it/s]
+2025-06-18 14:05:42,738 : INFO : state position: ['&', 'N', '(', '/', '*'] 
+2025-06-18 14:05:42,772 : INFO : new compound ['N(/*)(NCCCCCCCCCCC*)=O', 'N(/*)(=O)CCCCOc1ccc(CCC*)cc1', 'N(/*)CCCCCNC(=O)C*'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.81it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.19it/s]
+2025-06-18 14:05:43,385 : INFO : Valid SMILES ratio: 0.3333333333333333 
+2025-06-18 14:05:43,385 : INFO : Number of valid SMILES: 98 
+2025-06-18 14:05:43,385 : INFO : state position: ['&', 'N', '(', '/', '*', ')'] 
+2025-06-18 14:05:43,645 : INFO : new compound ['N(/*)CCO*', 'N(/*)(=O)CCCNCCOCCOCCOCCOCC*', 'N(/*)OCCOCCOCCOCCO*', 'N(/*)#C*', 'N(/*)N1CCC(*)CC1', 'N(/*)c1ccc(OCC*)cc1', 'N(/*)\\CCCCCO*)=O', 'N(/*)n1cc(CC*)nn1', 'N(/*)/N/c1ccc(N*)ccc1', 'N(/*)C1CCN(*)CC1', 'N(/*)(CNC(=O)CCCCCCNC(*)=O', 'N(/*)OCCn1cn(CCCC(=O)N*)nn1', 'N(/*)#CCOCCOCCOCCNC(*)=O', 'N(/*)N(C)CC1(C*)CC1', 'N(/*)c1ccc(OCCCCCC*)cc1', 'N(/*)\\C=C/C(=O)NCCCCCCCCN*', 'N(/*)n1ccc(N2CCN(*)CC2)cc1', 'N(/*)/N(CC(CCOCCOCCOCC*)=O)C1', 'N(/*)C(c1ccn(CC(=O)NC(*)=O)cc1)=O', 'N(/*)(=O)NCCCNC(C*)=O', 'N(/*)OCCO*', 'N(/*)#C*', 'N(/*)N1CCC(*)CC1', 'N(/*)c1ccc(NC(=O)C*)cc1', 'N(/*)\\c1ccc(OCCCC*)cc1', 'N(/*)n1nnc(COCCOC*)c1', 'N(/*)/C(NCCNC(=O)CO*)=O'] 
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.47it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.26it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.79it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.08it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 75.10it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 73.29it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.73it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.72it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.30it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.87it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.09it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 71.26it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 70.67it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 74.24it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 72.57it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.95it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.59it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.03it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.47it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 68.56it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 65.98it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.90it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.91it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 66.76it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 67.07it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 69.05it/s]
+Common alerts filtering:   0%|          | 0/1 [00:00<?, ?it/s]Common alerts filtering: 100%|██████████| 1/1 [00:00<00:00, 64.00it/s]
+2025-06-18 14:05:51,132 : INFO : Valid SMILES ratio: 0.4444444444444444 
+2025-06-18 14:05:51,133 : INFO : Number of valid SMILES: 110 
+2025-06-18 14:05:51,163 : INFO : save results at result/test/result_C0.1.csv 
+2025-06-18 14:05:51,163 : INFO : Finished! 
+start 2025-06-18 14:04:18
+end 2025-06-18 14:05:52

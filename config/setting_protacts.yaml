@@ -1,0 +1,84 @@
+# Basic setting
+c_val: 0.1
+# threshold_type: [time, generation_num]
+threshold_type: generation_num
+#hours: 0.01
+generation_num: 10000
+output_dir: result/test
+model_setting:
+   model_json: model/rnn_model/model.tf25.json
+   model_weight: model/rnn_model/model.tf25.h5
+token: model/rnn_model/tokens.pkl
+reward_setting: 
+  reward_module: reward.reward_protacts
+  reward_class: Linker_permeability_reward
+
+# Advanced setting
+expansion_threshold: 0.995
+simulation_num: 3
+flush_threshold: -1
+policy_setting: 
+  policy_module: policy.ucb1
+  policy_class: Ucb1
+
+# Restart setting
+save_checkpoint: False
+restart: False
+checkpoint_file: chemtsv2.ckpt.pkl
+
+# Filter setting
+use_radical_filter: True
+radical_filter:
+  module: filter.radical_filter
+  class: RadicalFilter
+use_ring_size_filter: True
+ring_size_filter:
+  module: filter.ring_size_filter
+  class: RingSizeFilter
+  max_threshold: 6
+  min_threshold: 5
+use_branch_filter: True
+branch_filter:
+  module: filter.branch_filter
+  class: BranchFilter
+  threshold: 1
+use_structual_alert_filter: True
+structural_alert_filter:
+  module: filter.structural_alert_filter
+  class: StructuralAlertFilterForXMol
+use_linker_length_filter: True
+linker_length_filter:
+  module: filter.linker_length_filter
+  class: LinkerLengthFilter
+  lower_threshold: False
+  upper_threshold: 15
+use_premodel_ad_filter: True
+premodel_ad_filter:
+  module: filter.premodel_ad_filter
+  class: PremodelADFilterForXMol
+  threshold: 0.1
+use_linker_similarity_filter: True
+linker_similarity_filter:
+  module: filter.linker_similarity_filter
+  class: LinkerSimilarityFilter
+  threshold: 0.3
+use_linker_validation_filter: True
+linker_validation_filter:
+  module: filter.linker_validation_filter
+  class: LinkerValidationFilter
+use_attachment_points_filter: True
+attachment_points_filter:
+  module: filter.attachment_points_filter
+  class: AttachmentPointsFilter
+  threshold: 2
+use_substructure_filter: True
+substructure_filter:
+  module: filter.substructure_filter
+  class: SubstructureFilterForXMol
+  substructure: ['[C]#[C][!#6;!#1;!#15]', '[!#6;!#1;!#15;!n;!o;!s][CH2][!#6;!#1;!#15;!n;!o;!s]', '[S;!$(S(=O)=O)]~[N]', '[!#6;!#1;!#15;!n;!o;!s;!$(S(=O)=O)][!#6;!#1;!#15;!n;!o;!s;!$(S(=O)=O)][!#6;!#1;!#15;!n;!o;!s;!$(S(=O)=O)]', '[N]=[C]=[C]', '[N]=[C]=[O]', '[N]=[CH]', '[C]=[S]', '[n][!#6;!#1;!#15;!n;!o;!s]']
+include_filter_result_in_reward: False
+leaf_parallel: False
+leaf_parallel_num: 18
+
+# Settings for linker generation
+cores: ['ClC(C=C1)=CC=C1C(C2=C(N3C4=NN=C3C)SC(C)=C2C)=N[C@H]4CC([*:1])=O', 'O[C@@H]1C[C@H](N(C1)C([C@H](C(C)(C)C)[*:2])=O)C(NCC2=CC=C(C=C2)C3=C(N=CS3)C)=O']
