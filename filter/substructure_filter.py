@@ -21,4 +21,7 @@ class SubstructureFilterForXMol(Filter):
         @transform_linker_to_mol(conf)
         def _check(mol, conf):
             return SubstructureFilter.check(mol, conf)
-        return _check(mol, conf)
+        try:
+            return _check(mol, conf)
+        except:
+            return False

@@ -1,4 +1,4 @@
-from chemtsv2.filter import Filter
+from chemtsv2.filter imp:ort Filter
 from chemtsv2.utils import transform_linker_to_mol
 
 
@@ -19,4 +19,7 @@ class RingSizeFilterForXMol(Filter):
         @transform_linker_to_mol(conf)
         def _check(mol, conf):
             return RingSizeFilter.check(mol, conf)
-        return _check(mol, conf)
+        try:
+            return _check(mol, conf)
+        except:
+            return False
