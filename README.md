@@ -88,6 +88,13 @@ chemtsv2-add_cores_to_linker -c config/setting_protacts.yaml
 | substructure_filter.py | PROTAC | Exclude linkers that result in PROTACs containing substructures specified in SMILES or SMARTS format, which are considered synthetically challenging or chemically unstable|
 | premodel_ad_filter.py | PROTAC | Exclude linkers that result in PROTACs with a maximum Tanimoto similarity below user-defined value to any of the 43 PROTACs used as training data for the prediction model for cell membrane permeability, based on Morgan fingerprints, whose radius and dimension were 2 and 2,048, respectively |
 
+## Data
+The `data` directory contains two files derived from PROTAC-DB 3.0 [1]:  
+- **PROTAC_Caco-2_data.csv**: Experimental data of Caco-2 cell membrane permeability for PROTACs.  
+- **protac_linker_fragments.smi**: SMILES representations of PROTAC linker fragments.
+
+[1] Ge, J.; Li, S.; Weng, G.; Wang, H.; Fang, M.; Sun, H.; Deng, Y.; Hsieh, C.-Y.; Li, D.; Hou, T. PROTAC-DB 3.0: An Updated Database of PROTACs with Extended Pharmacokinetic Param-eters. Nucleic Acids Res 2025, 53 (D1), D1510–D1515.
+
 ## License
 This package is distributed under the MIT License.
 
