@@ -13,14 +13,14 @@
 ### Example
 ```bash
 mamba create -n protacts -c conda-forge python==3.11
-mamba activate protacts
+conda activate protacts
 pip install chemtsv2==1.1.2 tabpfn==2.0.3 medchem==2.0.5 scikit-learn==1.5.1
 ```
 
 ## Quick start
 Clone this repository and move into it
 ```bash
-git clone https://github.com/your-username/PROTAC-TS.git # Replace with actual repo URL
+git clone git@github.com:ycu-iil/PROTAC-TS.git
 cd PROTAC-TS
 ```
 Construct a permeability model and design linkers with default settings:
