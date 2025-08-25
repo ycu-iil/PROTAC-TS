@@ -1,5 +1,5 @@
 input_file: 'result/feature/test/fea_morganfp.csv'
-output_path: 'result/test/'
+output_path: 'model/pre_model/PROTAC/'
 seed: 42
 
 model:
