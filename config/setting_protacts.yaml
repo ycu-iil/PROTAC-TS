@@ -3,7 +3,7 @@ c_val: 0.1
 # threshold_type: [time, generation_num]
 threshold_type: generation_num
 #hours: 0.01
-generation_num: 10000
+generation_num: 100
 output_dir: result/test
 model_setting:
    model_json: model/rnn_model/model.tf25.json
@@ -76,9 +76,6 @@ substructure_filter:
   module: filter.substructure_filter
   class: SubstructureFilterForXMol
   substructure: ['[C]#[C][!#6;!#1;!#15]', '[!#6;!#1;!#15;!n;!o;!s][CH2][!#6;!#1;!#15;!n;!o;!s]', '[S;!$(S(=O)=O)]~[N]', '[!#6;!#1;!#15;!n;!o;!s;!$(S(=O)=O)][!#6;!#1;!#15;!n;!o;!s;!$(S(=O)=O)][!#6;!#1;!#15;!n;!o;!s;!$(S(=O)=O)]', '[N]=[C]=[C]', '[N]=[C]=[O]', '[N]=[CH]', '[C]=[S]', '[n][!#6;!#1;!#15;!n;!o;!s]']
-include_filter_result_in_reward: False
-leaf_parallel: False
-leaf_parallel_num: 18
 
 # Settings for linker generation
 cores: ['ClC(C=C1)=CC=C1C(C2=C(N3C4=NN=C3C)SC(C)=C2C)=N[C@H]4CC([*:1])=O', 'O[C@@H]1C[C@H](N(C1)C([C@H](C(C)(C)C)[*:2])=O)C(NCC2=CC=C(C=C2)C3=C(N=CS3)C)=O']
