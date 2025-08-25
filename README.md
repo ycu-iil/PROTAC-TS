@@ -50,7 +50,7 @@ PROTAC-TS employs ChemTSv2 as a linker generator.
 Here, please prepare a reward file for PROTAC-TS according to instructions for how to define reward function in [ChemTSv2](https://github.com/molecule-generator-collection/ChemTSv2/blob/c61abbc702b914a76e076d87d416cdc67d3fd517/reward/README.md).
 If you use `reward/reward_protacts.py`, you can modify the path to the permeability model within this file.
 
-#### 2-2. Prepare a configuration file for linker design (e.g., config/setting_linker.yaml)
+#### 2-2. Prepare a configuration file for linker design (e.g., config/setting_protacts.yaml)
 Please prepare a yaml file containing the settings for PROTAC-TS. The details of these settings are described in [Setting to run PROTAC-TS](#Setting-to-run-PROTAC-TS) or [ChemTSv2](https://github.com/molecule-generator-collection/ChemTSv2/).
 
 #### 2-3. Run PROTAC-TS
