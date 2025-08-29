@@ -13,7 +13,7 @@
 ### Example
 ```bash
 mamba create -n protacts -c conda-forge python==3.11
-conda activate protacts
+mamba activate protacts
 pip install chemtsv2==1.1.2 tabpfn==2.0.3 medchem==2.0.5 scikit-learn==1.5.1
 ```
 
