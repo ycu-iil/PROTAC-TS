@@ -12,8 +12,8 @@ class LinkerLengthFilter(Filter):
             return False
         dist_mat = Chem.GetDistanceMatrix(mol)
         if config['linker_length_filter']['upper_threshold'] == False:
-            return dist_mat[asterisk_list[0]][asterisk_list[1]] >= config['linker_length_filter']['lower_threshold']
+            return dist_mat[asterisk_list[0]][asterisk_list[1]]-1 >= config['linker_length_filter']['lower_threshold']
         elif config['linker_length_filter']['lower_threshold'] == False:
-            return dist_mat[asterisk_list[0]][asterisk_list[1]] <= config['linker_length_filter']['upper_threshold']
+            return dist_mat[asterisk_list[0]][asterisk_list[1]]-1 <= config['linker_length_filter']['upper_threshold']
         else:
-            return dist_mat[asterisk_list[0]][asterisk_list[1]] >= config['linker_length_filter']['lower_threshold'] and dist_mat[asterisk_list[0]][asterisk_list[1]] <= config['linker_length_filter']['upper_threshold']
+            return dist_mat[asterisk_list[0]][asterisk_list[1]]-1 >= config['linker_length_filter']['lower_threshold'] and dist_mat[asterisk_list[0]][asterisk_list[1]]-1 <= config['linker_length_filter']['upper_threshold']
