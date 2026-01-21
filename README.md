@@ -77,14 +77,14 @@ chemtsv2-add_cores_to_linker -c config/setting_protacts.yaml
 ## Filters
 | Module | Target | Description |
 | ------------- | ------------- | ------------- |
-| attachment_points_filter.py | Linker | Exclude SMILES linkers in which the number of asterisks, which are used to indicate the points of connection to ligands, is not equal to two | 
-| linker_validation_filter.py | Linker | Exclude SMILES linkers that result in invalid molecules when attached to both ligands |
+| attachment_points_filter.py | Linker | Exclude linkers whose number of asterisks (used as ligand connection points) does not match the user-defined value | 
+| linker_validation_filter.py | Linker | Exclude linkers that result in invalid molecules when attached to both ligands |
 | radical_filter.py | Linker | Exclude SMILES linkers containing radical electrons |
 | ring_size_filter.py | Linker | Exclude SMILES linkers containing ring substructures with user‑defined size |
-| branch_filter.py | Linker | Exclude SMILES linkers in which two or more atoms branch off from the shortest path between the two attachment points, particularly when this path includes ring structures |
-| linker_length_filter.py | Linker | Enforce a maximum path length between attachment points |
-| linker_similarity_filter.py | Linker | Excludes SMILES linkers whose maximum Tanimoto similarity to any of the 2,748 linkers used in RNN-based linker generator training, calculated with Morgan fingerprints, whose radius and dimension were 2 and 2,048, respectively, is below user-defined value|
-| structural_alert_filter.py | PROTAC | Exclude linkers that, when attached to both ligands, result in PROTACs containing substructures listed under “Common Alerts” in the medchem package |
+| branch_filter.py | Linker | Exclude linkers whose shortest path between the two attachment points contains at least the user-defined number of branching atoms, including those in ring structures |
+| linker_length_filter.py | Linker | Exclude linkers whose maximum path length between the attachment points exceeds the user-defined value |
+| linker_similarity_filter.py | Linker | Excludes linkers whose maximum Tanimoto similarity to the linkers used in training the RNN-based linker generator, calculated using Morgan fingerprints, is below a user-defined value |
+| structural_alert_filter.py | PROTAC | Exclude molecules that contain substructures listed under “Common Alerts” in the medchem package |
 | substructure_filter.py | PROTAC | Exclude linkers that result in PROTACs containing substructures specified in SMILES or SMARTS format, which are considered synthetically challenging or chemically unstable|
 | premodel_ad_filter.py | PROTAC | Exclude linkers that result in PROTACs with a maximum Tanimoto similarity below user-defined value to any of the 43 PROTACs used as training data for the prediction model for cell membrane permeability, based on Morgan fingerprints, whose radius and dimension were 2 and 2,048, respectively |
 
