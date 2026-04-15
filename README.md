@@ -18,12 +18,14 @@ pip install chemtsv2==1.1.2 tabpfn==2.0.3 medchem==2.0.5 scikit-learn==1.5.1
 ```
 
 ## Quick start
-Clone this repository and move into it
+1. Clone this repository and move into it
 ```bash
 git clone git@github.com:ycu-iil/PROTAC-TS.git
 cd PROTAC-TS
 ```
-Construct a prediction model for cell membrane permeability and design linkers with default settings:
+2. Download data from PROTAC-DB 3.0[1]
+
+3. Construct a prediction model for cell membrane permeability and design linkers with default settings:
 ```bash
 # 1 – feature generation
 python make_feature.py -c config/setting_feature.yaml
@@ -32,31 +34,36 @@ python make_model.py -c config/setting_model.yaml
 # 3 – linker design (CPU)
 chemtsv2 -c config/setting_protacts.yaml
 ```
-For GPU‑accelerated reward evaluation:
+4. For GPU‑accelerated reward evaluation:
 ```bash
 chemtsv2 -c config/setting_protacts.yaml --gpu 0 --use_gpu_only_reward
 ```
 
 ## Detailed workflow
-### 1. Construct a prediction model for cell membrane permeability
-#### 1-1. Feature generation
+### 1 Download data from PROTAC-DB 3.0[1]
+Download the "PROTACs" and "linkers" CSV files from [PROTAC-DB 3.0](https://cadd.zju.edu.cn/protacdb/downloads) in accordance with its usage policy.
+- Prepare a `.csv` file containing cell membrane permeability data extracted from the PROTACs dataset, and place it in a directory of your choice.
+- Prepare a `.smi` file containing linker SMILES extracted from the linkers dataset, and place it in a directory of your choice.
+
+### 2. Construct a prediction model for cell membrane permeability
+#### 2-1. Feature generation
 `make_feature.py -c config/setting_feature.yaml` calculates descriptors defined in `config/setting_feature.yaml` (e.g., Morgan fingerprint, Mordred descriptor).
-#### 1-2. Model training
+#### 2-2. Model training
 `make_model.py -c config/setting_model.yaml` trains the model using the settings specified in `config/setting_model.yaml`.
 
-### 2. Design linkers
-#### 2-1. Prepare a reward file for linker design (e.g., reward/reward_protacts.py)
+### 3. Design linkers
+#### 3-1. Prepare a reward file for linker design (e.g., reward/reward_protacts.py)
 PROTAC-TS employs ChemTSv2 as a linker generator.
 Here, please prepare a reward file for PROTAC-TS according to instructions for how to define reward function in [ChemTSv2](https://github.com/molecule-generator-collection/ChemTSv2/blob/c61abbc702b914a76e076d87d416cdc67d3fd517/reward/README.md).
 If you use `reward/reward_protacts.py`, you can modify the path to the permeability model within this file.
 
-#### 2-2. Prepare a configuration file for linker design (e.g., config/setting_protacts.yaml)
+#### 3-2. Prepare a configuration file for linker design (e.g., config/setting_protacts.yaml)
 Please prepare a yaml file containing the settings for PROTAC-TS. The details of these settings are described in [Setting to run PROTAC-TS](#Setting-to-run-PROTAC-TS) or [ChemTSv2](https://github.com/molecule-generator-collection/ChemTSv2/).
 
-#### 2-3. Run PROTAC-TS
+#### 3-3. Run PROTAC-TS
 `chemtsv2 -c config/setting_protacts.yaml` launches linker design.
 
-### 3. Post‑processing
+### 4. Post‑processing
 Merge the designed linkers with ligands:
 ```bash
 chemtsv2-add_cores_to_linker -c config/setting_protacts.yaml
@@ -83,10 +90,10 @@ chemtsv2-add_cores_to_linker -c config/setting_protacts.yaml
 | ring_size_filter.py | Linker | Exclude SMILES linkers containing ring substructures with user‑defined size |
 | branch_filter.py | Linker | Exclude linkers whose shortest path between the two attachment points contains at least the user-defined number of branching atoms, including those in ring structures |
 | linker_length_filter.py | Linker | Exclude linkers whose maximum path length between the attachment points exceeds the user-defined value |
-| linker_similarity_filter.py | Linker | Excludes linkers whose maximum Tanimoto similarity to the linkers used in training the RNN-based linker generator, calculated using Morgan fingerprints, is below a user-defined value. If you use linker data from PROTAC-DB 3.0, please download it from [1]. |
+| linker_similarity_filter.py | Linker | Excludes linkers whose maximum Tanimoto similarity to the linkers used in training the RNN-based linker generator, calculated using Morgan fingerprints, is below a user-defined value.|
 | structural_alert_filter.py | PROTAC | Exclude molecules that contain substructures listed under “Common Alerts” in the medchem package |
 | substructure_filter.py | PROTAC | Exclude linkers that result in PROTACs containing substructures specified in SMILES or SMARTS format, which are considered synthetically challenging or chemically unstable|
-| premodel_ad_filter.py | PROTAC | Exclude linkers that result in PROTACs with a maximum Tanimoto similarity below user-defined value to any of the 43 PROTACs used as training data for the prediction model for cell membrane permeability, based on Morgan fingerprints, whose radius and dimension were 2 and 2,048, respectively. If you use data from PROTAC-DB 3.0, please download it from [1]. |
+| premodel_ad_filter.py | PROTAC | Exclude linkers that result in PROTACs with a maximum Tanimoto similarity below user-defined value to any of the 43 PROTACs used as training data for the prediction model for cell membrane permeability, based on Morgan fingerprints, whose radius and dimension were 2 and 2,048, respectively.|
 
 [1] Ge, J.; Li, S.; Weng, G.; Wang, H.; Fang, M.; Sun, H.; Deng, Y.; Hsieh, C.-Y.; Li, D.; Hou, T. PROTAC-DB 3.0: An Updated Database of PROTACs with Extended Pharmacokinetic Param-eters. Nucleic Acids Res 2025, 53 (D1), D1510–D1515.
 
