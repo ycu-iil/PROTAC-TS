@@ -152,7 +152,8 @@ def main():
         pass
     logger = setup_logger(output_path)
     logger.info("Start making model for PROTAC data")
-    df_all = df_all.iloc[:, 1:]
+    if "Unnamed: 0" in df_all.columns:
+        df_all = df_all.drop(columns=["Unnamed: 0"])
     df_all = df_all.dropna(axis="columns")
     df_PROTAC = df_all[df_all["cate"] == "PROTAC"]
     X_PROTAC = df_PROTAC.select_dtypes(exclude='object') 
