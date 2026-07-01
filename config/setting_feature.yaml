@@ -1,4 +1,4 @@
-input_file: 'data/PROTAC_Caco-2_data.csv'
+input_file: 'path/to/data_file.csv'
 target_column: 'Caco-2 A2B Papp (nm/s, Permeability)'
 output_path: 'result/feature/test/'
 
